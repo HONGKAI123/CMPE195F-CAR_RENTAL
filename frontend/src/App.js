@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-        <CustomNavbar />
+     
         <Route path='/home' exact component = {Home}/>
         <Route path='/login' exact component = {Login}/>
         <Route path='/register' exact component = {Register}/>

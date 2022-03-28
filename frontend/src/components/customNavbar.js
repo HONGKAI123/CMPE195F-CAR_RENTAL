@@ -11,7 +11,7 @@ export default function CustomNavbar(){
     return(
         <Navbar>
             <Container>
-                <Navbar.Brand href="/home">Car Rental</Navbar.Brand>
+                <Navbar.Brand href="/home">Yiyi Rental</Navbar.Brand>
                 <Nav className="mx-0">
                     <Button 
                         onClick={()=> history.push('/login')}

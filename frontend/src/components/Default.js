@@ -1,16 +1,12 @@
 import React from 'react'
+import CustomNavbar from './customNavbar'
 
 function Default(props) {
   return (
     <div>
-      <div className='header bs'>
-           <div className='d-flex'>
-                <h1>YIYI RENTAL</h1>    
-                
-                
-                
-                <button> user</button>
-           </div>
+      <div className='header-bs'>
+        <CustomNavbar/>
+           
       </div>
     
       <div className='content'>
