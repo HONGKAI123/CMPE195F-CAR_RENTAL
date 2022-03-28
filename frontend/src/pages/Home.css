@@ -1,0 +1,18 @@
+.animg{
+    align-items: center;
+    position: absolute;
+    background-size: contain;
+    filter: alpha(opacity=90);  
+    width: 100%;
+    opacity: 0.90;
+    color: #000000;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    animation: animatedBackground 10s ease-out;
+
+    animation-fill-mode: forwards;
+}
+
+h1{
+    position: relative;  
+}

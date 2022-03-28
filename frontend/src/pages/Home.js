@@ -3,12 +3,17 @@ import './Home.css';
 import {
   Container,
 } from 'react-bootstrap';
+import bgimg from '../res/backg.jpg'
+import NAVBAR from '../components/navbar';
+import Default from '../components/Default';
 
 function Home() {
   return (
-    <div>
-      <div className='bg'></div>
+    <Default>
+       
          
+              <h1 >Start Looking for your dream car!{' '}</h1>
+          
 
 
 
@@ -17,14 +22,14 @@ function Home() {
 
 
 
-    </div>  
+    </Default>  
        
        
        
        
        
      
-  )
+  );
 }
 
 export default Home;
