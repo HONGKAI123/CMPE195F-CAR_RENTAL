@@ -1,11 +1,27 @@
-import React from 'react'
+import React from 'react';
+import './Home.css';
+import {
+  Container,
+} from 'react-bootstrap';
 
 function Home() {
   return (
-      
+    <div>
+      <div className='bg'></div>
+         
+
+
+
+
+
+
+
+
+    </div>  
        
        
-       <h1>Homepage</h1>
+       
+       
        
      
   )
