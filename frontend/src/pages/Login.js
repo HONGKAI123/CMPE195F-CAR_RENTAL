@@ -3,7 +3,20 @@ import Default from '../components/Default';
 
 function Login() {
   return (
-    <div> <h1>LoginPage</h1></div>
+    <Default> 
+      
+      
+      
+      
+      <h1>LoginPage</h1>
+    
+    
+    
+    
+    
+    
+    
+    </Default>
   )
 }
 

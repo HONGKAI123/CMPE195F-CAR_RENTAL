@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
+      <h1 style={{ color: "White", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         YIYI RENTAL: Professional Car Rental Company
@@ -26,19 +26,20 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
+            <FooterLink href="#">Resevartion</FooterLink>
+            <FooterLink href="#">Livechat</FooterLink>
          
           </Column>
           <Column>
             <Heading>Power by</Heading>
-            <FooterLink href="#">React</FooterLink>
-            <FooterLink href="#">Express</FooterLink>
+            <FooterLink href="https://reactjs.org/" target="_blank"><img src ='/favicon.ico' alt='logo' width='55px' height='30px'/>React</FooterLink>
+            <FooterLink href="https://expressjs.com/" target="_blank"><img src ='/nodelogo.png' alt='logo' width='70px' height='30px'/>Express</FooterLink>
          
           </Column>
           <Column>
             <Heading>Social Media</Heading>
             <FooterLink href="#">
+            <img src ='/facebooklogo.svg' alt='logo' width='50px' height='30px'/>
               <i className="fab fa-facebook-f">
                 <span style={{ marginLeft: "10px" }}>
                   Facebook
@@ -46,6 +47,7 @@ const Footer = () => {
               </i>
             </FooterLink>
             <FooterLink href="#">
+            <img src ='/inslogo.png' alt='logo' width='50px' height='30px'/>
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px" }}>
                   Instagram

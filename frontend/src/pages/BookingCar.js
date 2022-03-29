@@ -3,9 +3,20 @@ import Default from '../components/Default';
 
 function BookingCar() {
   return (
-    <div>
+    <Default>
+        
+        
+        
+        
+        
         <h1>Bookingpage</h1>
-        </div>
+    
+    
+    
+    
+    
+    
+    </Default>
   )
 }
 
