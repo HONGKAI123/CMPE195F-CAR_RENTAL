@@ -1,4 +1,5 @@
 import React from 'react'
+import Default from '../components/Default';
 
 function BookingCar() {
   return (

@@ -1,8 +1,13 @@
 import React from 'react'
+import Default from '../components/Default';
 
 function Register() {
   return (
-    <div><h1>Register</h1></div>
+    <Default>
+    <h1>Register</h1>
+      
+      
+    </Default>
   )
 }
 
