@@ -21,3 +21,8 @@ img {
     max-height: 200%;
     height: auto;
   }
+
+.learn h2{
+  color:darkcyan;
+  border: 2px  coral;
+}

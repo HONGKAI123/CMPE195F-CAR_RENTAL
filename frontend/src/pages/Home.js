@@ -16,7 +16,7 @@ function Home() {
          <img src = "./backg.jpg"  />
          
           <div class='text1'><h1>Start Looking for your dream car!{' '}</h1>
-             <div></div>
+             <div><a href='./Login' className='learn'><h2>Learn More</h2></a></div>
 
 
           </div>
