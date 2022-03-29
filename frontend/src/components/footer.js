@@ -20,12 +20,12 @@ const Footer = () => {
       <Container>
         <Row >
           <Column >
-            <Heading  justify ="center">About Us</Heading>
+            <Heading>About Us</Heading>
             <FooterLink href="#"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
           
           </Column>
           <Column>
-            <Heading  justify ="center" >Services</Heading>
+            <Heading>Services</Heading>
             <FooterLink href="#"><img src ='/reselog.png' alt='logo' width='55px' height='30px'/>Resevartion</FooterLink>
             <FooterLink href="#"><img src ='/livechatlogo.png' alt='logo' width='55px' height='30px'/>Livechat</FooterLink>
          
