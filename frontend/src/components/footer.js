@@ -18,14 +18,14 @@ const Footer = () => {
         YIYI RENTAL: Professional Car Rental Company
       </h1>
       <Container>
-        <Row>
-          <Column>
-            <Heading>About Us</Heading>
+        <Row >
+          <Column >
+            <Heading  justify ="center">About Us</Heading>
             <FooterLink href="#"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
           
           </Column>
           <Column>
-            <Heading>Services</Heading>
+            <Heading  justify ="center" >Services</Heading>
             <FooterLink href="#"><img src ='/reselog.png' alt='logo' width='55px' height='30px'/>Resevartion</FooterLink>
             <FooterLink href="#"><img src ='/livechatlogo.png' alt='logo' width='55px' height='30px'/>Livechat</FooterLink>
          

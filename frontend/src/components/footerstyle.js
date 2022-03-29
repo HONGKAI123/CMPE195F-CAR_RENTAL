@@ -8,7 +8,7 @@ export const Box = styled.div`
   position: relative;
   bottom: 0;
   width: 100%;
- 
+  textAlign: "center"
   
    
   @media (max-width: 1000px) {
@@ -23,12 +23,15 @@ export const Container = styled.div`
     max-width: 1000px;
     margin-bottom: 20px ;
     /* background: red; */
+    textAlign: "center"
+    margin-left: 100px;
 `
    
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-left: 50px;
 
 
 `;
@@ -50,6 +53,7 @@ export const FooterLink = styled.a`
   margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
+  textAlign: "center"
    
   &:hover {
       color: green;
