@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import BookingCar from './pages/BookingCar';
 import CustomNavbar from './components/customNavbar';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         <Route path='/login' exact component = {Login}/>
         <Route path='/register' exact component = {Register}/>
         <Route path='/bookingcar'  exact component = {BookingCar}/>
+
+
+
+        <Footer/>
        
       
       </BrowserRouter>

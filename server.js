@@ -4,4 +4,4 @@ const port = 5000
 
 app.get('/',(req,res) => res.send('caonima'))
 
-app.listen(port,() =>console.log('nodejs in running'))
+app.listen(port,() => console.log('nodejs in running'))

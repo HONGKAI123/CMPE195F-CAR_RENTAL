@@ -18,7 +18,7 @@ export default function CustomNavbar(){
                         justifyContent: 'space-between'}}>
                     <Typography variant="h6" component="div" sx={{fontWeight: 700}}>
                         <img src ='/logo3.png' alt='logo' width='55px' height='30px'/>
-                        YIYI Rental
+                        YIYI {''}Rental
                     </Typography>
                     <Box>
                         <Button color="inherit" onClick={() => {history.push('/login')}}>Login</Button>
