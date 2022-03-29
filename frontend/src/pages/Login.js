@@ -2,7 +2,8 @@ import React from 'react'
 import Default from '../components/Default';
 import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
-import './login.css'
+import './login.css';
+import "antd/dist/antd.css";
 
 function Login() {
   return (
@@ -25,9 +26,7 @@ function Login() {
                     <Input/>
                 </FormItem>
 
-                <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
+                <Button type="primary" className='btn1'>Login</Button>
               
 
 
