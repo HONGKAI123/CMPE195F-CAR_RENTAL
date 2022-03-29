@@ -21,13 +21,13 @@ const Footer = () => {
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Team Members</FooterLink>
+            <FooterLink href="#"><img src ='/peoplelog.png' alt='logo' width='55px' height='30px'/>Team Members </FooterLink>
           
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Resevartion</FooterLink>
-            <FooterLink href="#">Livechat</FooterLink>
+            <FooterLink href="#"><img src ='/reselog.png' alt='logo' width='55px' height='30px'/>Resevartion</FooterLink>
+            <FooterLink href="#"><img src ='/livechatlogo.png' alt='logo' width='55px' height='30px'/>Livechat</FooterLink>
          
           </Column>
           <Column>
