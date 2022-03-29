@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+
 export default function CustomNavbar(){
     let history = useHistory();
 
@@ -16,7 +17,10 @@ export default function CustomNavbar(){
                     sx={{display: 'flex',
                         justifyContent: 'space-between'}}>
                     <Typography variant="h6" component="div" sx={{fontWeight: 700}}>
-                        YIYI Rental
+                        <img src ='/logo3.png' alt='logo' 
+                        width='55px' height='30px'
+                        />
+                          YIYI Rental
                     </Typography>
                     <Box>
                         <Button color="inherit">Login</Button>
