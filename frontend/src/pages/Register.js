@@ -28,7 +28,7 @@ function Register() {
 
                 <Button type="primary" className='btn1'>Login</Button>
                 <div>
-                <a href='./Register'>Not a member? Click to register</a>
+                <a href='./login'>Already a member? Click to Login</a>
                 </div>
             </Form>
             </Col>
