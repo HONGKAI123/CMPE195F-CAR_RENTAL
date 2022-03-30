@@ -22,7 +22,7 @@ export default function CustomNavbar(){
                     </Typography>
                     <Box>
                         <Button color ="inherit"onClick={()=> {history.push('./Home')}}>Home</Button>
-                        <Button color ="inherit"onClick={()=> {history.push('./bookingcar')}}>Car Booking</Button>
+                        <Button color ="inherit"onClick={()=> {history.push('./carlist')}}>Car List</Button>
                         <Button color="inherit" onClick={() => {history.push('/login')}}>Login</Button>
                         <Button onClick={() => {history.push('/register')}}
                             sx={{background: '#7E80DF', color: '#FFFFFF', ml: 3}}>
