@@ -25,7 +25,7 @@ function Login() {
                              <Input/>
                          </Form.Item>
                 <FormItem name ='password' label ='Password' rules = {[{required: true, message:'Please enter your password'}]}>
-                    <Input/>
+                    <Input type='password'/>
                 </FormItem>
 
                 <Button type="primary" className='btn1'>Login</Button>
