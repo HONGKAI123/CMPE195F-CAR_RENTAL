@@ -29,6 +29,8 @@ function Login() {
                 </FormItem>
 
                 <Button type="primary" className='btn1'>Login</Button>
+
+                <a href='./Register'>Not a member? Click to register</a>
               
 
 
