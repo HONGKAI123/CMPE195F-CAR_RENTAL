@@ -10,7 +10,11 @@ function Register() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [cfmpassword, setCPassword] = useState('');
-  //console.log(cfmpassword)
+  
+  const checkButtonVisibility = () => {
+    return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
+  }
+
   return (
     <Default> 
       <div className='login' >
@@ -20,21 +24,21 @@ function Register() {
           <Col lg={8} className='text-box '>
             <Form layout='vertical' className='login-box p-4'>
               <h1>Sign up to start your trip</h1>
-              <Form.Item name='username' label='Username' rules={[{required: true, message:'Please enter your username'}]}>
-                             <Input onChange={(e) => {setUserName(e.target.value)}}/>
-                         </Form.Item>
-                <FormItem name ='password' label ='Password' rules = {[{required: true, message:'Please enter your password'}]}>
-                    <Input type='password' onChange={(e) => {setPassword(e.target.value)}}/>
-                </FormItem>
+              <FormItem name='username' label='Username' rules={[{required: true, message:'Please enter your username'}]}>
+                <Input onChange={(e) => {setUserName(e.target.value)}}/>
+              </FormItem>
+              <FormItem name ='password' label ='Password' rules = {[{required: true, message:'Please enter your password'}]}>
+                <Input type='password' onChange={(e) => {setPassword(e.target.value)}}/>
+              </FormItem>
                       
-                <FormItem name ='password' label ='Confrim Password' rules = {[{required: true, message:'Please enter your password'}]}>
-                  <Input type = 'password' onChange={(e) => {setCPassword(e.target.value)}}/>
-                </FormItem>
+              <FormItem name ='cpassword' label ='ConfrimPassword' rules = {[{required: true, message:'Please enter your password'}]}>
+                <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
+              </FormItem>
 
-                <Button type="primary" className='btn1'>Login</Button>
-                <div>
-                <a href='./login'>Already a member? Click to Login</a>
-                </div>
+              <Button disabled={checkButtonVisibility()}  type="primary" className='btn1'>Login</Button>
+              <div>
+              <a href='./login'>Already a member? Click to Login</a>
+              </div>
             </Form>
             </Col>
         </Row>
