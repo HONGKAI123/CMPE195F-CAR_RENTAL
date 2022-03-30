@@ -21,8 +21,8 @@ function Register() {
         <Row gutter={16} >
           <Col lg={16} className='img1'>
           <img src='./car1.jpg' height= '100%' width='200%'/></Col>
-          <Col lg={8} className='text-box '>
-            <Form layout='vertical' className='login-box p-4'>
+          <Col lg={8} className='text-box p-5 '>
+            <Form layout='vertical' className='login-box p-5'>
               <h1>Sign up to start your trip</h1>
               <FormItem name='username' label='Username' rules={[{required: true, message:'Please enter your username'}]}>
                 <Input onChange={(e) => {setUserName(e.target.value)}}/>
@@ -35,7 +35,7 @@ function Register() {
                 <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
               </FormItem>
 
-              <Button disabled={checkButtonVisibility()}  type="primary" className='btn1'>Login</Button>
+              <button disabled={checkButtonVisibility()}  type="primary" className='btn1'><h2>Sign Up</h2></button>
               <div>
               <a href='./login'>Already a member? Click to Login</a>
               </div>
