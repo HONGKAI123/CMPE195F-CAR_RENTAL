@@ -4,7 +4,7 @@ import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
-
+import axios from 'axios'
 
 function Register() {
   const [userName, setUserName] = useState('');
@@ -15,6 +15,22 @@ function Register() {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
 
+  const handleSubmitButtonClick = () => {
+    axios({
+      method: 'post',
+      url: 'http://localhost:5000/',
+      data: {
+        password: password,
+        username: userName
+      }
+    })
+    .then((res) => {
+
+    })
+    .catch((err) => {
+
+    })
+  }
   return (
     <Default> 
       <div className='login' >
@@ -35,7 +51,11 @@ function Register() {
                 <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
               </FormItem>
 
+
               <button disabled={checkButtonVisibility()}  type="primary" className='btn1'><h2>Sign Up</h2></button>
+
+
+
               <div>
               <a href='./login'>Already a member? Click to Login</a>
               </div>
