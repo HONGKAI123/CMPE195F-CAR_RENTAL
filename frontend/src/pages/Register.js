@@ -9,7 +9,8 @@ import "antd/dist/antd.css";
 function Register() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-
+  const [cfmpassword, setCPassword] = useState('');
+  //console.log(cfmpassword)
   return (
     <Default> 
       <div className='login' >
@@ -24,6 +25,10 @@ function Register() {
                          </Form.Item>
                 <FormItem name ='password' label ='Password' rules = {[{required: true, message:'Please enter your password'}]}>
                     <Input type='password' onChange={(e) => {setPassword(e.target.value)}}/>
+                </FormItem>
+                      
+                <FormItem name ='password' label ='Confrim Password' rules = {[{required: true, message:'Please enter your password'}]}>
+                  <Input type = 'password' onChange={(e) => {setCPassword(e.target.value)}}/>
                 </FormItem>
 
                 <Button type="primary" className='btn1'>Login</Button>
