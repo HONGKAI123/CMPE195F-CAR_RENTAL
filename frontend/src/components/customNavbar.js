@@ -21,7 +21,7 @@ export default function CustomNavbar(){
                         YIYI {''}Rental
                     </Typography>
                     <Box>
-                        <Button color ="inherit"onClick={()=> {history.push('./Home')}}>Home</Button>
+                        <Button color ="inherit"onClick={()=> {history.push('./')}}>Home</Button>
                         <Button color ="inherit"onClick={()=> {history.push('./carlist')}}>Car List</Button>
                         <Button color="inherit" onClick={() => {history.push('/login')}}>Login</Button>
                         <Button onClick={() => {history.push('/register')}}
