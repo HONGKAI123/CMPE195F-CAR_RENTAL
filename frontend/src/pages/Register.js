@@ -14,23 +14,25 @@ function Register() {
   const checkButtonVisibility = () => {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
+  console.log(userName, password)
 
   const handleSubmitButtonClick = () => {
     axios({
       method: 'post',
-      url: 'http://localhost:5000/',
+      url: 'http://localhost:5000/signup',
       data: {
+        username: userName,
         password: password,
-        username: userName
       }
     })
     .then((res) => {
-
+      console.log(res.data);
     })
     .catch((err) => {
-
+      console.log(err);
     })
   }
+
   return (
     <Default> 
       <div className='login' >
@@ -52,7 +54,7 @@ function Register() {
               </FormItem>
 
 
-              <button disabled={checkButtonVisibility()}  type="primary" className='btn1'><h2>Sign Up</h2></button>
+              <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick}><h2>Sign Up</h2></button>
 
 
 

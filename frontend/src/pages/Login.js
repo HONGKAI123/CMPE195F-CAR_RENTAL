@@ -50,7 +50,7 @@ function Login() {
 
 
             </Form>
-            </Col>
+          </Col>
         </Row>
 
 
