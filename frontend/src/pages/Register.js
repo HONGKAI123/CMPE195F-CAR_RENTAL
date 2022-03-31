@@ -4,7 +4,7 @@ import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
-import axios from 'axios'
+//import axios from 'axios'
 
 function Register() {
   const [userName, setUserName] = useState('');
@@ -15,7 +15,7 @@ function Register() {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
 
-  const handleSubmitButtonClick = () => {
+  /*const handleSubmitButtonClick = () => {
     axios({
       method: 'post',
       url: 'http://localhost:5000/',
@@ -30,7 +30,7 @@ function Register() {
     .catch((err) => {
 
     })
-  }
+  }*/
   return (
     <Default> 
       <div className='login' >
