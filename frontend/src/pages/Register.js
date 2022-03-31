@@ -5,8 +5,10 @@ import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
 import axios from 'axios'
+import { useHistory } from "react-router-dom";
 
 function Register() {
+  let history = useHistory();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [cfmpassword, setCPassword] = useState('');
@@ -19,13 +21,14 @@ function Register() {
   const handleSubmitButtonClick = () => {
     axios({
       method: 'post',
-      url: 'http://localhost:5000/signup',
+      url: 'http://localhost:5000/register',
       data: {
         username: userName,
         password: password,
       }
     })
     .then((res) => {
+      history.push('/login');
       console.log(res.data);
     })
     .catch((err) => {
