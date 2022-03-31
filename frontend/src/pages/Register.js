@@ -4,7 +4,7 @@ import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
-import axios from 'axios'
+//import axios from 'axios'
 
 function Register() {
   const [userName, setUserName] = useState('');
@@ -15,7 +15,7 @@ function Register() {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
 
-  const handleSubmitButtonClick = () => {
+  /*const handleSubmitButtonClick = () => {
     axios({
       method: 'post',
       url: 'http://localhost:5000/',
@@ -30,15 +30,15 @@ function Register() {
     .catch((err) => {
 
     })
-  }
+  }*/
   return (
     <Default> 
       <div className='login' >
         <Row gutter={16} >
           <Col lg={16} className='img1'>
           <img src='./car1.jpg' height= '100%' width='200%'/></Col>
-          <Col lg={8} className='text-box '>
-            <Form layout='vertical' className='login-box p-4'>
+          <Col lg={8} className='text-box p-5 '>
+            <Form layout='vertical' className='login-box p-5'>
               <h1>Sign up to start your trip</h1>
               <FormItem name='username' label='Username' rules={[{required: true, message:'Please enter your username'}]}>
                 <Input onChange={(e) => {setUserName(e.target.value)}}/>
@@ -51,7 +51,11 @@ function Register() {
                 <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
               </FormItem>
 
-              <Button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick}>Login</Button>
+
+              <button disabled={checkButtonVisibility()}  type="primary" className='btn1'><h2>Sign Up</h2></button>
+
+
+
               <div>
               <a href='./login'>Already a member? Click to Login</a>
               </div>
