@@ -20,10 +20,6 @@ function Login() {
   }
   return (
     <Default> 
-      
-      
-      
-      
       <div className='login' >
 
         <Row gutter={16} >

@@ -10,7 +10,7 @@ const dbConnection = require('./db')
 
 app.get('/',(req,res) => res.send('caonima'))
 
-app.post('/signup', (req, res) => {
+app.post('/register', (req, res) => {
     console.log(req.body);
     res.send('success');
 })

@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function CarList(){
     return (
-        <h1>Carlist</h1>
+        <h1>Car List</h1>
     );
 }
