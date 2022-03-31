@@ -4,7 +4,7 @@ import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
-//import axios from 'axios'
+import axios from 'axios'
 
 function Register() {
   const [userName, setUserName] = useState('');
@@ -14,23 +14,25 @@ function Register() {
   const checkButtonVisibility = () => {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
+  console.log(userName, password)
 
-  /*const handleSubmitButtonClick = () => {
+  const handleSubmitButtonClick = () => {
     axios({
       method: 'post',
-      url: 'http://localhost:5000/',
+      url: 'http://localhost:5000/signup',
       data: {
+        username: userName,
         password: password,
-        username: userName
       }
     })
     .then((res) => {
-
+      console.log(res.data);
     })
     .catch((err) => {
-
+      console.log(err);
     })
-  }*/
+  }
+
   return (
     <Default> 
       <div className='login' >
@@ -52,7 +54,7 @@ function Register() {
               </FormItem>
 
 
-              <button disabled={checkButtonVisibility()}  type="primary" className='btn1'><h2>Sign Up</h2></button>
+              <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick}><h2>Sign Up</h2></button>
 
 
 
