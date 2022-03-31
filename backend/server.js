@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: false}));
 
 const dbConnection = require('./db')
 
-app.get('/',(req,res) => res.send('caonima'))
+app.get('/',(req,res) => res.send('caonima123'))
 
 app.post('/register', (req, res) => {
     console.log(req.body);
