@@ -17,7 +17,8 @@ function Login() {
 
         <Row gutter={16} >
           <Col lg={16} className='img1'>
-          <img src='./car1.jpg' height= '100%' width='200%'/></Col>
+          <img src='./car1.jpg' height= '100%' width='200%'/>
+          </Col>
           <Col lg={8} className='text-box '>
             <Form layout='vertical' className='login-box p-4'>
               <h1>Login to start your trip</h1>
@@ -36,7 +37,7 @@ function Login() {
 
 
             </Form>
-            </Col>
+          </Col>
         </Row>
 
 
