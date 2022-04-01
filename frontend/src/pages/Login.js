@@ -26,7 +26,7 @@ function Login() {
 
   const loginbuttonclick = () => {
     axios({
-      method: 'get',
+      method: 'post',
       url: 'http://localhost:5000/login',
       data: {
         username: userName,
@@ -35,12 +35,12 @@ function Login() {
     })
     .then((res) => {
       history.push('/carlist');
-      console.log(res.data);
     })
     .catch((err) => {
       console.log(err);
     })
   }
+
   return (
     <Default> 
       <div className='login' >
@@ -58,7 +58,7 @@ function Login() {
                     <Input type='password' onChange={(e)=>{setPassword(e.target.value)}}/>
                 </FormItem>
 
-                <button disabled= {checkvisiable()} className='btn1' onClick={loginbuttonclick()}><h2>Login</h2></button>
+                <button disabled= {checkvisiable()} className='btn1' onClick={loginbuttonclick}><h2>Login</h2></button>
                  
                  <div id='kennthdad'>
                    <a href='./Register' className='kennth'>Not a member? Click to register</a>

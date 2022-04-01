@@ -28,7 +28,7 @@ function Register() {
       }
     })
     .then((res) => {
-      history.push('/login');
+      //history.push('/login');
       console.log(res.data);
     })
     .catch((err) => {
