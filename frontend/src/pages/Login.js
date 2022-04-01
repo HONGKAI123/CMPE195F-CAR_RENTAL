@@ -4,6 +4,8 @@ import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
+import axios from 'axios'
+import { useHistory } from "react-router-dom";
 
 
 
@@ -12,11 +14,32 @@ import "antd/dist/antd.css";
 
 function Login() {
 
-  const [username, setUserName] = useState('');
-  const [password, setPassword] = useState('')
+
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  let history = useHistory();
 
   const checkvisiable =()=>{
-    return (username ==='' || password==='')
+    return (userName ==='' || password==='')
+  }
+
+
+  const loginbuttonclick = () => {
+    axios({
+      method: 'get',
+      url: 'http://localhost:5000/login',
+      data: {
+        username: userName,
+        password: password,
+      }
+    })
+    .then((res) => {
+      history.push('/carlist');
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
   return (
     <Default> 
@@ -35,7 +58,7 @@ function Login() {
                     <Input type='password' onChange={(e)=>{setPassword(e.target.value)}}/>
                 </FormItem>
 
-                <button disabled= {checkvisiable()} className='btn1'><h2>Login</h2></button>
+                <button disabled= {checkvisiable()} className='btn1' onClick={loginbuttonclick()}><h2>Login</h2></button>
                  
                  <div id='kennthdad'>
                    <a href='./Register' className='kennth'>Not a member? Click to register</a>
