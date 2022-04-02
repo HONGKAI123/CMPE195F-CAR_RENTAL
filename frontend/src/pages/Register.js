@@ -17,8 +17,12 @@ function Register() {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
   console.log(userName, password)
+  function showAlert() {
+    alert ("Create account sucessfully!");
+  }
 
   const handleSubmitButtonClick = () => {
+    showAlert()
     axios({
       method: 'post',
       url: 'http://localhost:5000/register',
@@ -57,7 +61,7 @@ function Register() {
               </FormItem>
 
 
-              <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick}><h2>Sign Up</h2></button>
+              <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick} ><h2>Sign Up</h2></button>
 
 
 
