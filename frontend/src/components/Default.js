@@ -14,7 +14,6 @@ function Default(props) {
       </div>
       <Footer/>
     </div>
-    
   )
 }
 

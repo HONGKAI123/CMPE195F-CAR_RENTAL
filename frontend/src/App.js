@@ -7,9 +7,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import BookingCar from './pages/BookingCar';
 import CarList from './pages/CarList';
-import CustomNavbar from './components/customNavbar';
-import Footer from './components/footer';
-import {AuthContext, AuthProvider} from './components/authContext';
+import Profile from './pages/Profile';
+import {AuthProvider} from './components/authContext';
 
 
 function App() {
@@ -23,6 +22,7 @@ function App() {
           <Route path='/register' exact component = {Register}/>
           <Route path='/bookingcar'  exact component = {BookingCar}/>
           <Route path='/carlist'  exact component = {CarList}/>
+          <Route path='/profile'  exact component = {Profile}/>
         </BrowserRouter>
       </div>
     </AuthProvider>

@@ -10,11 +10,9 @@ export function AuthProvider(props){
 
     useEffect(() => {
         let loginValue = localStorage.getItem('login');
-        console.log('testing', loginValue);
         if (loginValue !== null){
             loginValue = JSON.parse(loginValue);
             if(loginValue === true){
-                console.log(loginValue);
                 setAuth(true);
             }
         }

@@ -8,10 +8,24 @@ import Button from '@mui/material/Button';
 import {AuthContext} from '../components/authContext';
 import Avatar from '@mui/material/Avatar';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import AvatarMenu from './avatarMenu';
 
 export default function CustomNavbar(){
     let history = useHistory();
     const {auth, setAuth} = useContext(AuthContext);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    }
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return(
         <Box >
             <AppBar position="static" sx={{background: '#333333'}}>
@@ -27,9 +41,21 @@ export default function CustomNavbar(){
                             <Button color ="inherit" onClick={()=> {history.push('./carlist')}}>Car List</Button>
                         )} 
                         {(auth) ? (
-                            <Avatar sx={{ml: 2, background: '#B0ABCA'}}>
-                                <PersonOutlineIcon />
-                            </Avatar>
+                            <React.Fragment>
+                                <Tooltip title="Account Setting">
+                                    <IconButton
+                                        onClick={(event) => setAnchorEl(event.currentTarget)}
+                                        size="small"
+                                        aria-controls={open ? 'account-menu' : undefined}
+                                        aria-haspopup="true"
+                                        aria-expanded={open ? 'true' : undefined}>
+                                        <Avatar sx={{ml: 2, background: '#B0ABCA'}}>
+                                            <PersonOutlineIcon />
+                                        </Avatar>
+                                    </IconButton>
+                                </Tooltip>
+                                <AvatarMenu open={open} anchorEl={anchorEl} handleClose={handleClose} />
+                            </React.Fragment>
                         ) : (
                         <React.Fragment>
                             <Button color="inherit" onClick={() => {history.push('/login')}}>Login</Button>
