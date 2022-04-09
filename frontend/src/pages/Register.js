@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState, useContext, useEffect} from 'react'
 import Default from '../components/Default';
 import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
@@ -6,23 +6,26 @@ import './login.css';
 import "antd/dist/antd.css";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
+import {AuthContext} from '../components/authContext';
 
 function Register() {
   let history = useHistory();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [cfmpassword, setCPassword] = useState('');
+  const {auth, setAuth} = useContext(AuthContext);
   
   const checkButtonVisibility = () => {
     return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
   }
-  console.log(userName, password)
+  
+
   function showAlert() {
     alert ("Create account sucessfully!");
   }
 
   const handleSubmitButtonClick = () => {
-    showAlert()
+    
     axios({
       method: 'post',
       url: 'http://localhost:5000/register',
@@ -32,6 +35,7 @@ function Register() {
       }
     })
     .then((res) => {
+      showAlert();
       history.push('/login');
       console.log(res.data);
     })
@@ -39,6 +43,12 @@ function Register() {
       console.log(err);
     })
   }
+
+  useEffect(() => {
+    if(auth === true){
+      history.push('/carlist');
+    }
+  }, [])
 
   return (
     <Default> 

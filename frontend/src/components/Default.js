@@ -3,23 +3,16 @@ import CustomNavbar from './customNavbar'
 import Footer from './footer'
 
 function Default(props) {
+
   return (
     <div>
       <div className='header-bs'>
-        <CustomNavbar/>
-        
-           
+        <CustomNavbar/>  
       </div>
-      
-    
       <div className='content'>
-          {props.children}
-          
-          
-          
-    </div>
-    <Footer/>
-      
+          {props.children}       
+      </div>
+      <Footer/>
     </div>
     
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect} from 'react';
 import Default from '../components/Default';
 import {Row , Col , Form , Input, Button} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
@@ -6,15 +6,10 @@ import './login.css';
 import "antd/dist/antd.css";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
-
-
-
-
-
+import {AuthContext} from '../components/authContext';
 
 function Login() {
-
-
+  const {auth, setAuth} = useContext(AuthContext);
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   let history = useHistory();
@@ -22,7 +17,6 @@ function Login() {
   const checkvisiable =()=>{
     return (userName ==='' || password==='')
   }
-
 
   const loginbuttonclick = () => {
     axios({
@@ -34,12 +28,19 @@ function Login() {
       }
     })
     .then((res) => {
+      setAuth(true);
       history.push('/carlist');
     })
     .catch((err) => {
       console.log(err);
     })
   }
+
+  useEffect(() => {
+    if(auth === true){
+      history.push('/carlist');
+    }
+  }, [])
 
   return (
     <Default> 
@@ -63,27 +64,10 @@ function Login() {
                  <div id='kennthdad'>
                    <a href='./Register' className='kennth'>Not a member? Click to register</a>
                    </div>
-                
-              
-
-
-
             </Form>
           </Col>
         </Row>
-
-
-
-
-
       </div>
-    
-    
-    
-    
-    
-    
-    
     </Default>
   )
 }
