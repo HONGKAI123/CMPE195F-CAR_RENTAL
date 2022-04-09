@@ -15,7 +15,7 @@ function Login() {
   let history = useHistory();
 
   const checkvisiable =()=>{
-    return (userName ==='' || password==='')
+    return (userName === '' || password === '')
   }
 
   const loginbuttonclick = () => {
@@ -28,6 +28,7 @@ function Login() {
       }
     })
     .then((res) => {
+      localStorage.setItem('login', JSON.stringify(true));
       setAuth(true);
       history.push('/carlist');
     })

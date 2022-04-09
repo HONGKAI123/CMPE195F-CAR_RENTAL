@@ -9,18 +9,13 @@ import BookingCar from './pages/BookingCar';
 import CarList from './pages/CarList';
 import CustomNavbar from './components/customNavbar';
 import Footer from './components/footer';
-import {AuthContext} from './components/authContext';
+import {AuthContext, AuthProvider} from './components/authContext';
 
 
 function App() {
-  const [auth, setAuth] = useState(false);
-  const authState = {
-    auth, 
-    setAuth
-  };
-  
+
   return (
-    <AuthContext.Provider value={authState} >
+    <AuthProvider>
       <div className="App"> 
         <BrowserRouter>
           <Route path='/' exact component = {Home}/>
@@ -30,7 +25,7 @@ function App() {
           <Route path='/carlist'  exact component = {CarList}/>
         </BrowserRouter>
       </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 

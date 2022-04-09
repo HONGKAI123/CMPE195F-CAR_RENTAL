@@ -12,7 +12,6 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 export default function CustomNavbar(){
     let history = useHistory();
     const {auth, setAuth} = useContext(AuthContext);
-
     return(
         <Box >
             <AppBar position="static" sx={{background: '#333333'}}>
