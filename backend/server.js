@@ -13,6 +13,7 @@ app.get('/',(req,res) => res.send('caonima123'))
 
 
 app.use(require('./routes/userRoutes'))
+app.use(require('./routes/CarlistRoutes'))
 
 
 app.listen(port,() => console.log('yiyi is in running on port 5000'))

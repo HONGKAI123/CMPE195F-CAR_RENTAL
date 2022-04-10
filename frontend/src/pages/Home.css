@@ -15,6 +15,7 @@
     font-size: 70px;
     font-weight: bolder;
     color:azure;
+    text-align: center;
   }
 
 img {
@@ -26,4 +27,5 @@ img {
 .learn h2{
   color:darkcyan;
   border: 2px  coral;
+  text-align: center;
 }

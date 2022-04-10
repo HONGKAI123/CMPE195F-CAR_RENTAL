@@ -6,10 +6,10 @@ function Default(props) {
 
   return (
     <div>
-      <div className='header-bs'>
+      <div >
         <CustomNavbar/>  
       </div>
-      <div className='content'>
+      <div>
           {props.children}       
       </div>
       <Footer/>

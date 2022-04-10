@@ -4,14 +4,14 @@ import {AuthContext} from '../components/authContext';
 import { useHistory } from "react-router-dom";
 
 export default function Profile(){
-    // const {auth, setAuth} = useContext(AuthContext);
-    // let history = useHistory();
+    const {auth, setAuth} = useContext(AuthContext);
+    let history = useHistory();
 
-    // useEffect(() => {
-    //     if(auth === false){
-    //         history.push('/');
-    //     }
-    // }, [])
+    useEffect(() => {
+        if(auth === false){
+            history.push('/');
+        }
+    }, [])
 
     return (
         <Default>

@@ -1,0 +1,22 @@
+.kennth1{
+    
+    text-align: left;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    
+}
+
+.animate__animated.animate__bounce{
+    text-align: center;
+    border: 10px;
+    
+    
+}
+
+h1 span{
+    font-size: 58px;
+    background-color: gray;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
