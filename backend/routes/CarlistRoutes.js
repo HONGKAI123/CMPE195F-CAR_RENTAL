@@ -3,7 +3,7 @@ const router = express.Router();
 const carlist = require("../models/CarModel")
 
 
-router.get("/Cartlist", async(req, res) => {
+router.get("/Carlist", async(req, res) => {
 
    
 
