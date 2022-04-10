@@ -8,9 +8,9 @@ router.get("/Cartlist", async(req, res) => {
    
 
     try {
-        const cars = await carlist.find({})
-        if(cars) {
-            res.send(cars)
+        const car = await carlist.find({})
+        if(car) {
+            res.send(car)
         }
         else{
             return res.status(400).json(error);
