@@ -29,6 +29,7 @@ function Login() {
       }
     })
     .then((res) => {
+      sessionStorage.setItem('userInfo', JSON.stringify(res.data));
       localStorage.setItem('login', JSON.stringify(true));
       setAuth(true);
       history.push('/carlist');

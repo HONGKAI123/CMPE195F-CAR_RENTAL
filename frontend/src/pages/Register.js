@@ -13,6 +13,12 @@ function Register() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [cfmpassword, setCPassword] = useState('');
+  const [driverLicense, setDriverLicense] =useState('');
+  const [email, setEmail] = useState('');
+  const [expDate, setExpDate] = useState('');
+  const [fullName, setFullName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [age, setAge] = useState('')
   const {auth, setAuth} = useContext(AuthContext);
   
   const checkButtonVisibility = () => {
@@ -32,6 +38,13 @@ function Register() {
       data: {
         username: userName,
         password: password,
+        fullName: fullName,
+        email: email,
+        phone: phone,
+        age : age,
+        expDate: expDate,
+        driverLicense: driverLicense,
+
       }
     })
     .then((res) => {
@@ -69,6 +82,32 @@ function Register() {
               <FormItem name ='cpassword' label ='ConfrimPassword' rules = {[{required: true, message:'Please enter your password'}]}>
                 <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
               </FormItem>
+
+              <FormItem name ='license' label ='License' rules = {[{required: true, message:'Please enter your license'}]}>
+                <Input onChange={(e) => {setDriverLicense(e.target.value)}}/>
+              </FormItem>
+
+              <FormItem name ='email' label ='Email' rules = {[{required: false, message:'Please enter your emial'}]}>
+                <Input onChange={(e) => {setEmail(e.target.value)}}/>
+              </FormItem>
+
+              <FormItem name ='expdata' label ='Expdata' rules = {[{required: true, message:'Please enter your driver license Expdata'}]}>
+                <Input onChange={(e) => {setExpDate(e.target.value)}}/>
+              </FormItem>
+
+              <FormItem name ='full' label ='FullName' rules = {[{required: true, message:'Please enter your FullName'}]}>
+                <Input onChange={(e) => {setFullName(e.target.value)}}/>
+              </FormItem>
+
+              <FormItem name ='phone' label ='Phone Number' rules = {[{required: true, message:'Please enter your Phone Number'}]}>
+                <Input onChange={(e) => {setPhone(e.target.value)}}/>
+              </FormItem>
+
+              <FormItem name ='age' label ='Age' rules = {[{required: true, message:'Please enter your Age'}]}>
+                <Input onChange={(e) => {setAge(e.target.value)}}/>
+              </FormItem>
+
+              
 
 
               <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick} ><h2>Sign Up</h2></button>
