@@ -106,16 +106,9 @@ function Register() {
               <FormItem name ='age' label ='Age' rules = {[{required: true, message:'Please enter your Age'}]}>
                 <Input onChange={(e) => {setAge(e.target.value)}}/>
               </FormItem>
-
-              
-
-
               <button disabled={checkButtonVisibility()}  type="primary" className='btn1' onClick={handleSubmitButtonClick} ><h2>Sign Up</h2></button>
-
-
-
               <div>
-              <a href='./login'>Already a member? Click to Login</a>
+                <a href='./login'>Already a member? Click to Login</a>
               </div>
             </Form>
             </Col>
