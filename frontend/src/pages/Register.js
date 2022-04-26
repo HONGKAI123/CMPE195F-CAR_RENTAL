@@ -18,17 +18,32 @@ function Register() {
   const [expDate, setExpDate] = useState('');
   const [fullName, setFullName] = useState('')
   const [phone, setPhone] = useState('')
-  const [age, setAge] = useState('')
+  const [age, setAge] = useState(1)
   const {auth, setAuth} = useContext(AuthContext);
   
   const checkButtonVisibility = () => {
-    return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) )
+    return ( (password === '') || (userName === '') || (cfmpassword === '') || (password !== cfmpassword) || (age < 18) || (!phonenumber(phone) ))
   }
   
 
   function showAlert() {
     alert ("Create account sucessfully!");
   }
+
+  function phonenumber(inputtxt)
+{
+  var phoneno = /^\d{10}$/;
+  if(inputtxt.match(phoneno)){
+      return true
+        }
+      else{
+   
+        return  false;
+        }
+}
+
+
+
 
   const handleSubmitButtonClick = () => {
     
@@ -87,7 +102,7 @@ function Register() {
                 <Input onChange={(e) => {setDriverLicense(e.target.value)}}/>
               </FormItem>
 
-              <FormItem name ='email' label ='Email' rules = {[{required: false, message:'Please enter your emial'}]}>
+              <FormItem name ='email' label ='Email' rules = {[{required: true, message:'Please enter your emial'}]}>
                 <Input onChange={(e) => {setEmail(e.target.value)}}/>
               </FormItem>
 

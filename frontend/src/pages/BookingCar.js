@@ -136,7 +136,7 @@ class BookingCar extends PureComponent {
                 amount={money * 100}
                 stripeKey="pk_test_51KrzBBGpc1kpCMR6qT7wLqzJfdKvmcfpUwB9GrPmTCEin38uvy7rJMbeMkuhPwnWEqvD1k34VOSLp7NYWjUvD5s800zeMupc3l"
               >
-                  <button className="btn1">
+                  <button className="btn123">
                 Book Now
               </button>
               </StripeCheckout>
