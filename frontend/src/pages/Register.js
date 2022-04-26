@@ -91,7 +91,7 @@ function Register() {
                 <Input onChange={(e) => {setEmail(e.target.value)}}/>
               </FormItem>
 
-              <FormItem name ='expdata' label ='Expdata' rules = {[{required: true, message:'Please enter your driver license Expdata'}]}>
+              <FormItem name ='expdata' label ='Exp data' rules = {[{required: true, message:'Please enter your driver license Expdata'}]}>
                 <Input onChange={(e) => {setExpDate(e.target.value)}}/>
               </FormItem>
 
