@@ -79,7 +79,7 @@ function Register() {
                 <Input type='password' onChange={(e) => {setPassword(e.target.value)}}/>
               </FormItem>
                       
-              <FormItem name ='cpassword' label ='ConfrimPassword' rules = {[{required: true, message:'Please enter your password'}]}>
+              <FormItem name ='cpassword' label ='Confrim Password' rules = {[{required: true, message:'Please enter your password'}]}>
                 <Input type='password' onChange={(e) => {setCPassword(e.target.value)}}/>
               </FormItem>
 
@@ -95,7 +95,7 @@ function Register() {
                 <Input onChange={(e) => {setExpDate(e.target.value)}}/>
               </FormItem>
 
-              <FormItem name ='full' label ='FullName' rules = {[{required: true, message:'Please enter your FullName'}]}>
+              <FormItem name ='full' label ='Full Name' rules = {[{required: true, message:'Please enter your FullName'}]}>
                 <Input onChange={(e) => {setFullName(e.target.value)}}/>
               </FormItem>
 
