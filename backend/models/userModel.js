@@ -10,7 +10,8 @@ const userSchema = new mongoose.Schema({
      phone : {type : String, required : true},
      age : {type : Number , required : true},
      driverLicense: {type : String, required : true},
-     expDate: DateOnly
+     expDate: DateOnly,
+     isCarOwner:{type : Boolean}
 })
 
 const userModel = mongoose.model('users' , userSchema)

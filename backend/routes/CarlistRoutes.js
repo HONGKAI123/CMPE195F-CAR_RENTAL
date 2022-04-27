@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const carlist = require("../models/CarModel")
+const Car = require("../models/CarModel")
 
 
 router.get("/Carlist", async(req, res) => {
 
     try {
-        const car = await carlist.find({})
+        const car = await Car.find({})
         if(car) {
             res.send(car)
         }

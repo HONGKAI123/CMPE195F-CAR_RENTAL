@@ -58,6 +58,7 @@ router.put("profile", async (req, res) => {
         profile.age = req.body.age;
         // profile.driverLicense = req.body.driverLicense;
         profile.expDate = req.body.expDate;
+        //profile.isCarOwner = req.body.isCarOwner;
 
         await profile.save();
 

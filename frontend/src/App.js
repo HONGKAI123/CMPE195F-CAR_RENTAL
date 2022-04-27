@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import BookingCar from './pages/BookingCar';
 import CarList from './pages/CarList';
-import Profile from './pages/Profile';
+import Profile from './pages/profile';
 import {AuthProvider} from './components/authContext';
 
 

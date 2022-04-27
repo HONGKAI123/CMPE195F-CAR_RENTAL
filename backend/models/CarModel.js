@@ -4,6 +4,7 @@ const carSchema = new mongoose.Schema({
      name : {type:String , required: true},
      image : {type:String, required: true},
      rentPerHour : {type:String , required: true},
+     carOwner : {type:String , required: true}
 
 
 })
