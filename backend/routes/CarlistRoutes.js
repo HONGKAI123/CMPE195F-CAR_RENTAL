@@ -37,6 +37,7 @@ router.post("/addcar", async (req, res) => {
       car.name = req.body.name;
       car.image = req.body.image;
       car.rentPerHour = req.body.rentPerHour;
+     // car.carOwner = req.body.carOwner;
   
       await car.save();
   

@@ -132,6 +132,7 @@ class BookingCar extends PureComponent {
               {/* 测试卡号：https://stripe.com/docs/testing#cards */}
               <StripeCheckout
                 shippingAddress
+                currency='USD'
                 token={onToken}
                 amount={money * 100}
                 stripeKey="pk_test_51KrzBBGpc1kpCMR6qT7wLqzJfdKvmcfpUwB9GrPmTCEin38uvy7rJMbeMkuhPwnWEqvD1k34VOSLp7NYWjUvD5s800zeMupc3l"

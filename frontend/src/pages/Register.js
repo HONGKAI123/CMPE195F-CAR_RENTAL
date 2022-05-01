@@ -1,12 +1,14 @@
 import React , {useState, useContext, useEffect} from 'react'
 import Default from '../components/Default';
-import {Row , Col , Form , Input, Button} from 'antd'
+import {Row , Col , Form , Input, Button,DatePicker} from 'antd'
 import FormItem from 'antd/lib/form/FormItem';
 import './login.css';
 import "antd/dist/antd.css";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
 import {AuthContext} from '../components/authContext';
+
+const { RangePicker } = DatePicker;
 
 function Register() {
   let history = useHistory();

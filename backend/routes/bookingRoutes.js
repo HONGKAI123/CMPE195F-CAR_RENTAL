@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Booking = require("../models/bookingModel");
 const Car = require("../models/CarModel");
+const User = require("../models/userModel")
 
 const stripe = require("stripe")(
   "sk_test_51KrzBBGpc1kpCMR6ZbdZswBssBPVLkonKisZXobdhjY5tI7k2MQ0mgXMO6Eb1qdyICBvXWxXNmmxdpfA0LDDZaAZ00yKJcznap"
@@ -19,6 +20,7 @@ router.post("/bookingcar", async (req, res) => {
       const payment = await stripe.charges.create(
         {
           amount: req.body.money * 100,
+          currency: "USD",
           customer: customer.id,
           receipt_email: token.email
         },
@@ -34,7 +36,7 @@ router.post("/bookingcar", async (req, res) => {
         await newbooking.save();
 
         const car = await Car.findOne({_id : req.body.car})
-        car.bookedTimeSlots.push(req.body.bookedTimeSlots)
+        car.bookedTime.push(req.body.bookedTime)
         await car.save();
         
         res.send("Your booking is successfull");
@@ -52,8 +54,8 @@ router.post("/bookingcar", async (req, res) => {
 router.get("/allbookings", async(req, res) => {
 
   try {
-
-      const bookings = await Booking.find().populate('cars')
+    
+      const bookings = await Booking.findOne({_id : res.body.User}).populate('cars')
       res.send(bookings)
       
   } catch (error) {
